@@ -1,0 +1,13 @@
+<h2 class="text-center text-2xl font-bold">Список героев</h2>
+
+<ul>
+    @for (hero of heroes; track hero.id) {
+    <li class="py-2">
+        <button [class.bg-orange-400]="hero === selectedHero" (click)="onSelect(hero)" type="button"
+            class="border py-2 px-4 border-orange-400">
+            <span class="mr-3">{{hero.id}}</span>
+            <span class="name">{{hero.name}}</span>
+        </button>
+    </li>
+    }
+</ul>
