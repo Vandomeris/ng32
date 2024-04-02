@@ -1,5 +1,6 @@
 <h2 class="text-center text-2xl font-bold">Список героев</h2>
 
+
 <ul>
     @for (hero of heroes; track hero.id) {
     <li class="py-2">
@@ -11,3 +12,7 @@
     </li>
     }
 </ul>
+
+<app-hero-details [hero]="selectedHero"></app-hero-details>
+
+<app-messages></app-messages>
